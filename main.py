@@ -3,6 +3,7 @@ from telebot import types
 import webbrowser
 from golovolomka import Golovolomka
 from Gonka import Gonka
+from Simulator import Simulator
 
 bot = telebot.TeleBot('6425757827:AAFom6wJs2H-AFdj6kJMqc1fDXboK99i89o')
 
@@ -34,9 +35,9 @@ def on_click1(message):
         markup.row(btn6)
         btn7 = types.KeyboardButton(text='🏎Гонки🏎')
         markup.row(btn7)
-        btn10 = types.KeyboardButton(text="⚽️Спортивные⚽️")
+        btn10 = types.KeyboardButton(text="🤖Симуляторы🤖")
         markup.row(btn10)
-        btn11 = types.KeyboardButton(text="🤖Симуляторы🤖")
+        btn11 = types.KeyboardButton(text="⚽️Спортивные⚽")
         markup.row(btn11)
         btn12 = types.KeyboardButton(text="🌍Страгетия🌍")
         markup.row(btn12)
@@ -54,9 +55,10 @@ def on_clickGameSelect(message):
         gonka = Gonka(bot)
         gonka.on_clickGonka(message)
         print("gonka")
-
-    if message.text == "⛱Песочница⛱":
-        print("pesochnica")
+    if message.text == "🤖Симуляторы🤖":
+        simulator = Simulator(bot)
+        simulator.on_clickSimulator()
+        print("simulator")
 
 ###############################################################
 if __name__=='__main__':
