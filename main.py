@@ -57,7 +57,7 @@ def on_clickGameSelect(message):
         print("gonka")
     if message.text == "🤖Симуляторы🤖":
         simulator = Simulator(bot)
-        simulator.on_clickSimulator()
+        simulator.on_clickSimulator(message)
         print("simulator")
 
 ###############################################################
