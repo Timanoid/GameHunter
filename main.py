@@ -6,6 +6,7 @@ from Gonka import Gonka
 from Simulator import Simulator
 from Sport import Sport
 from strategy import Strategy
+from shuter import Shuter
 
 bot = telebot.TeleBot('6425757827:AAFom6wJs2H-AFdj6kJMqc1fDXboK99i89o')
 
@@ -68,6 +69,10 @@ def on_clickGameSelect(message):
         strategy = Strategy(bot)
         strategy.on_clickStrategy(message)
         print('strategy')
+    if message.text == '💣Шутер💣':
+        shuter = Shuter(bot)
+        shuter.on_clickShuter(message)
+        print('shuter')
 
 ###############################################################
 if __name__=='__main__':
