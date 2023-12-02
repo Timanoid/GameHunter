@@ -25,7 +25,7 @@ class Simulator:
             markup.row(btnfe)
             btnj = types.KeyboardButton(text='❤️Симулятор жизни❤️')
             markup.row(btnj)
-            self.bot.send_message(message.chat.id, 'Вы бы хотели поиграть в симулятор жизни или симулятор феомы?',
+            self.bot.send_message(message.chat.id, 'Вы бы хотели поиграть в симулятор жизни или симулятор фермы?',
                                   reply_markup=markup)
             self.bot.register_next_step_handler(message, self.on_clickvidsim)
         if message.text == "🆓Бесплатная🆓":

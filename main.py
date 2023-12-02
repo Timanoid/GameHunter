@@ -4,6 +4,7 @@ import webbrowser
 from golovolomka import Golovolomka
 from Gonka import Gonka
 from Simulator import Simulator
+from Sport import Sport
 
 bot = telebot.TeleBot('6425757827:AAFom6wJs2H-AFdj6kJMqc1fDXboK99i89o')
 
@@ -59,6 +60,9 @@ def on_clickGameSelect(message):
         simulator = Simulator(bot)
         simulator.on_clickSimulator(message)
         print("simulator")
+    if message.text == "⚽️Спортивные⚽":
+        sport = Sport(bot)
+        sport.on_clickSport(message)
 
 ###############################################################
 if __name__=='__main__':
